@@ -2,7 +2,7 @@
   <b>English</b> ｜ <a href="README.md">简体中文</a>
 </p>
 
-# Terminal Proxy Toggle Guide
+<h1 align="center">Terminal Proxy Toggle Guide</h1>
 
 <p align="center">
   <b>A toggle for your command line: <code>proxy on</code> gets you online, <code>proxy off</code> keeps you online.</b><br>
@@ -22,6 +22,10 @@
   <a href="#4-when-it-breaks-verify-and-troubleshoot">Troubleshooting</a> ·
   <a href="#6-cheat-sheet">Cheat sheet</a>
 </p>
+
+> [!IMPORTANT]
+> **Disclaimer**: This guide is provided for technical learning and discussion only. It explains how to turn proxy environment variables on and off in the macOS terminal. It does **not** provide any proxy service, server, or node, and it does not endorse any unlawful use.
+> Follow the laws and regulations that apply to you, along with the terms of service of any network you use. Every example here targets the loopback address `127.0.0.1` only.
 
 ---
 

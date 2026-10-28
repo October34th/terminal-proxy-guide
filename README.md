@@ -2,7 +2,7 @@
   <b>简体中文</b> ｜ <a href="README.en.md">English</a>
 </p>
 
-# Terminal 代理开关指南
+<h1 align="center">Terminal 代理开关指南</h1>
 
 <p align="center">
   <b>给命令行装一个开关：<code>proxy on</code> 上网通，<code>proxy off</code> 也通。</b><br>
@@ -22,6 +22,11 @@
   <a href="#四出问题了验证与排错">出问题</a> ·
   <a href="#六速查卡">速查卡</a>
 </p>
+
+> [!IMPORTANT]
+> **免责声明**：本文档仅供技术学习与交流，讲解 macOS 终端中代理环境变量的开启与关闭，**不提供**任何代理服务、服务器或节点，也不涉及任何违法用途。
+>
+> 请遵守你所在国家或地区的法律法规，以及所使用网络服务的条款。文中所有示例只指向本机回环地址 `127.0.0.1`。
 
 ---
 
@@ -560,6 +565,7 @@ scutil --proxy
 
 > [!NOTE]
 > 别用 `ifconfig | grep utun` 来判断 TUN。macOS 自己就会创建 `utun0`、`utun1`… 这些网卡（iCloud 私密中继、接力等功能都在用），看到 `utun` **不代表**开了 TUN。
+>
 > 最可靠的判断：去看 Clash Verge 里 TUN 那个开关的状态。
 
 ---
