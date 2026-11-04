@@ -5,7 +5,7 @@
 <h1 align="center">Terminal 代理开关指南</h1>
 
 <p align="center">
-  <b>给命令行装一个开关：<code>proxy on</code> 上网通，<code>proxy off</code> 也通。</b><br>
+  <b>给 Terminal 装一个开关：<code>proxy on</code> 走 Clash，<code>proxy off</code> 走直连，两种状态都不会卡住。</b><br>
 </p>
 
 <p align="center">

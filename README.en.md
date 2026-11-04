@@ -5,7 +5,7 @@
 <h1 align="center">Terminal Proxy Toggle Guide</h1>
 
 <p align="center">
-  <b>A toggle for your command line: <code>proxy on</code> gets you online, <code>proxy off</code> keeps you online.</b><br>
+  <b>A switch for Terminal: <code>proxy on</code> routes through Clash, <code>proxy off</code> goes direct, and nothing hangs in either state.</b><br>
 </p>
 
 <p align="center">
