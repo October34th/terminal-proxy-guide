@@ -1,0 +1,75 @@
+name: 遇到问题 / 报错（中文）
+description: 按模板填写，能大幅提高问题被解决的概率
+title: "[问题] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈！
+        请先确认已经看过 README 的「四、出问题了：验证与排错」一节。
+        信息填得越全，越不需要来回追问。
+
+  - type: input
+    id: macos
+    attributes:
+      label: macOS 版本
+      description: "终端执行 `sw_vers -productVersion` 的结果"
+      placeholder: "例如 14.5"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: shell
+    attributes:
+      label: 你用的 shell
+      description: "终端执行 `echo $SHELL` 的结果"
+      options:
+        - /bin/zsh
+        - /bin/bash
+        - 其他（请在下方补充）
+    validations:
+      required: true
+
+  - type: input
+    id: client
+    attributes:
+      label: 代理客户端与版本
+      description: "例如：Clash Verge Rev 1.7.7 / ClashX Pro / Mihomo Party"
+      placeholder: "Clash Verge Rev x.x.x"
+    validations:
+      required: true
+
+  - type: input
+    id: port
+    attributes:
+      label: 混合端口
+      description: "Clash 设置里「混合端口 / Mixed Port」显示的数字"
+      placeholder: "7897"
+    validations:
+      required: true
+
+  - type: textarea
+    id: symptom
+    attributes:
+      label: 现象与报错原文
+      description: "贴文字，不要只发截图。说明你执行了什么命令、期望什么、实际发生了什么。"
+      render: shell
+      placeholder: |
+        $ proxy on
+        ❌ Clash 没有在 127.0.0.1:7897 监听
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: tried
+    attributes:
+      label: 你已经试过哪些
+      description: 勾选做过的，不用全勾
+      options:
+        - label: 执行过 `proxy status`
+        - label: 执行过 `nc -z 127.0.0.1 <端口>`
+        - label: 执行过 `proxy off` 后新开窗口重试
+        - label: 检查过 Clash 里的端口号
+        - label: 检查过 git / npm 的代理残留（README 第五节）
+        - label: 重启过 Clash 和终端

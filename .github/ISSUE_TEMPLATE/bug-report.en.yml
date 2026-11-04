@@ -1,0 +1,75 @@
+name: Report a bug (English)
+description: Fill this in and your issue gets fixed much faster
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report!
+        Please check Section 4 ("When It Breaks: Verify and Troubleshoot") in the README first.
+        The more you fill in here, the less we have to go back and forth.
+
+  - type: input
+    id: macos
+    attributes:
+      label: macOS version
+      description: "Output of `sw_vers -productVersion`"
+      placeholder: "e.g. 14.5"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: shell
+    attributes:
+      label: Shell
+      description: "Output of `echo $SHELL`"
+      options:
+        - /bin/zsh
+        - /bin/bash
+        - Other (describe below)
+    validations:
+      required: true
+
+  - type: input
+    id: client
+    attributes:
+      label: Proxy client and version
+      description: "e.g. Clash Verge Rev 1.7.7 / ClashX Pro / Mihomo Party"
+      placeholder: "Clash Verge Rev x.x.x"
+    validations:
+      required: true
+
+  - type: input
+    id: port
+    attributes:
+      label: Mixed port
+      description: "The number shown under Settings → Mixed Port in Clash"
+      placeholder: "7897"
+    validations:
+      required: true
+
+  - type: textarea
+    id: symptom
+    attributes:
+      label: What happens, and the exact error output
+      description: "Paste text, not just a screenshot. Include the command you ran, what you expected, and what actually happened."
+      render: shell
+      placeholder: |
+        $ proxy on
+        ❌ Nothing is listening on 127.0.0.1:7897
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: tried
+    attributes:
+      label: What you've already tried
+      description: Check the ones you did; no need to check them all
+      options:
+        - label: Ran `proxy status`
+        - label: Ran `nc -z 127.0.0.1 <port>`
+        - label: Ran `proxy off` and retried in a new window
+        - label: Verified the port number in Clash
+        - label: Checked git / npm for leftover proxy settings (README section 5)
+        - label: Restarted Clash and the terminal

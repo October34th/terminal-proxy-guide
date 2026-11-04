@@ -1,0 +1,19 @@
+# macOS system files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Editors / IDEs
+.idea/
+.vscode/
+*.swp
+
+# Editor backups and temp files
+*~
+*.bak
+*.tmp
+
+# Local test scratch files
+test.sh
